@@ -61,4 +61,19 @@ public class BinarySearchTree<T extends Comparable<T>> {
         printPreOrder(node.rightChild); // Print recursively right
     }
 
+    // Print contents of tree in ascending order
+    public void printInOrder() {
+        printInOrder(root);
+    }
+
+    // Internal method to print in order
+    private void printInOrder(Node node) {
+        if (node == null) {
+            return;
+        }
+        printInOrder(node.leftChild); // Print lesser values first
+        System.out.println(node.data); // Then print current node
+        printInOrder(node.rightChild); // Finally print greater values
+    }
+
 }
