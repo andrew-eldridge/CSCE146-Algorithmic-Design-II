@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29531d02-7168-4541-ab07-ff40325ca477" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/binary-search-tree/BinarySearchTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/binary-search-tree/BinarySearchTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/binary-search-tree/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/binary-search-tree/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -71,7 +72,8 @@
       <option name="presentableId" value="Default" />
       <updated>1585070760353</updated>
       <workItem from="1585070763585" duration="1507000" />
-      <workItem from="1585076887529" duration="1088000" />
+      <workItem from="1585076887529" duration="1721000" />
+      <workItem from="1585277818940" duration="1741000" />
     </task>
     <servers />
   </component>
@@ -83,7 +85,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

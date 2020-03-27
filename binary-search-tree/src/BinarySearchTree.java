@@ -76,4 +76,72 @@ public class BinarySearchTree<T extends Comparable<T>> {
         printInOrder(node.rightChild); // Finally print greater values
     }
 
+    // Search for given value in tree
+    public boolean search(T data) {
+        return recursiveSearch(root, data);
+    }
+
+    // Internal method for recursive search
+    private boolean recursiveSearch(Node node, T data) {
+        if (node == null) {
+            // Reached a leaf
+            return false;
+        }
+        boolean found = false;
+        if (data.compareTo(node.data) == 0) {
+            // Values are equal
+            found = true;
+        } else if (data.compareTo(node.data) > 0) {
+            // Value is greater than current node
+            found = recursiveSearch(node.rightChild, data);
+        } else if (data.compareTo(node.data) < 0) {
+            // Value is less than current node
+            found = recursiveSearch(node.leftChild, data);
+        }
+        return found;
+    }
+
+    // Remove item from tree
+    public void remove(T data) {
+        root = remove(root, data);
+    }
+
+    // Recursively search for item to remove
+    private Node remove(Node node, T data) {
+        if (node == null) {
+            return null;
+        }
+        if (data.compareTo(node.data) < 0) {
+            // Value is less than current node
+            node.leftChild = remove(node.leftChild, data);
+        } else if (data.compareTo(node.data) > 0) {
+            // Value is greater than current node
+            node.rightChild = remove(node.rightChild, data);
+        } else {
+            // Values are equal
+            if (node.rightChild == null) {
+                return node.leftChild;
+            }
+            if (node.leftChild == null) {
+                return node.rightChild;
+            }
+            Node temp = findMinInTree(node.rightChild);
+            node.data = temp.data;
+            node.rightChild = remove(node.rightChild, temp.data);
+        }
+        return node;
+    }
+
+    // Recursively search for smallest node in provided tree
+    private Node findMinInTree (Node node) {
+        if (node == null) {
+            return null;
+        }
+        if (node.leftChild == null) {
+            return node;
+        } else {
+            return findMinInTree(node.leftChild);
+        }
+    }
+
 }

@@ -24,5 +24,9 @@ public class Main {
 
         // Print in order
         intTree.printInOrder();
+
+        // Search for values in tree
+        System.out.println("5 in tree: " + intTree.search(5));
+        System.out.println("8 in tree: " + intTree.search(8));
     }
 }
