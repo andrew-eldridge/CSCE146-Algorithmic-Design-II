@@ -28,5 +28,13 @@ public class Main {
         // Search for values in tree
         System.out.println("5 in tree: " + intTree.search(5));
         System.out.println("8 in tree: " + intTree.search(8));
+
+        // Remove values from tree
+        intTree.remove(5);
+        intTree.remove(7);
+
+        // Check changes
+        intTree.printInOrder();
+        System.out.println("5 in tree: " + intTree.search(5));
     }
 }
